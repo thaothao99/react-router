@@ -1,9 +1,8 @@
 import React from 'react'
 
-const Setting = () => {
+const Setting = (props) => {
   return <div>
-    {/* Setting page - Section: FooSection */}
-    {/* Setting page */}
+    Setting page
   </div>
 }
 

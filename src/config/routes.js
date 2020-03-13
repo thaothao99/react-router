@@ -14,6 +14,12 @@ export default [
     isProtected: true
   },
   {
+    title: 'Dashboard | Sample App',
+    component: 'Dashboard',
+    path: '/',
+    isProtected: true
+  },
+  {
     title: 'Setting | Sample App',
     component: 'Setting',
     path: '/setting',
