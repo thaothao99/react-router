@@ -11,11 +11,6 @@
 1. Khi người dùng đăng nhập thành công, sẽ lưu giá trị của token (tùy ý với độ dài lớn hơn 0) tại localStorage với tên là _token_.
 2. Sử dụng file config route và component (vì trong thực tế không thể config bằng tay)
 3. Nếu chạy test bị lỗi có thể xem lại video test bằng cách click vào phím phía dưới
-      <p align="center">
-     <img src="./at/debug.png" width="100%" alt="Thao khảo lỗi">
-   </p>
-4. Tham khảo trang bài giải mẫu tại [đây](http://test5.training.phuonghau.com)
-
 ## Test case
 
 1. Người dùng truy cập đến _/dashboard_. Vì chưa đăng nhập, nên người dùng được chuyển về path _/login_
@@ -32,8 +27,3 @@
 12. User khi truy cập tới một route không được định nghĩa trong file config sẽ hiển thị _Page not found_ với selector _[data-test=404]_
 13. Ứng dụng được implement code-splitting
 
-### Success Example
-
-  <p align="center">
-     <img src="./at/success.png" width="100%" alt="Thao khảo lỗi">
-   </p>

@@ -14,7 +14,7 @@ function AppRouter(props) {
   console.log(isAuth())
   return (
     <div>
-      {isAuth() && <Layout {...props}></Layout>}
+
       <Switch>
         {
           publicRoutes.map((route, indx) =>
@@ -22,12 +22,12 @@ function AppRouter(props) {
               key={indx}
               exact
               path={route.path}
-              render={(props) => {
+              render={(props1) => {
                 const Component = React.lazy(() => import(`./${route.component}`))
                 return (
                   <React.Suspense fallback={null}>
                     {
-                      isAuth() ? <Redirect to='/dashboard'></Redirect> : <Component {...props}></Component>
+                      isAuth() ? <Redirect to='/dashboard'></Redirect> : <Component {...props} {...props1}></Component>
                     }
                   </React.Suspense>
                 )
@@ -41,17 +41,21 @@ function AppRouter(props) {
               key={indx}
               exact
               path={route.path}
-              render={(props) => {
+              render={(props1) => {
                 const Component = React.lazy(() => import(`./${route.component}`))
                 return (
                   <React.Suspense fallback={null}>
+                    <Layout {...props} {...props1}></Layout>
                     {
                       isAuth() ?
-                        <Component {...props}></Component>
+                        (
+
+                          <Component className="sbc" {...props} {...props1}></Component>
+
+                        )
                         : <Redirect to='/login'></Redirect>
                     }
                   </React.Suspense>
-
                 )
               }}
             ></Route>

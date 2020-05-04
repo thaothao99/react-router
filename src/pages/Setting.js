@@ -2,7 +2,8 @@ import React from 'react'
 
 const Setting = (props) => {
   return <div>
-    Setting page
+    <p>
+      {window.location.href.split('=')[1] ? (`Setting page - Section: ${window.location.href.split('=')[1]}`) : `Setting page`}</p>
   </div>
 }
 
