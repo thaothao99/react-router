@@ -1,4 +1,4 @@
-## Mục tiêu của bài test
+## Mục tiêu của
 
 1. Sử dụng được react-router-dom để navigate các trang với nhau
 2. Kết hợp được react-router-dom và phương thức xác thực người dùng thông qua trang đăng nhập
